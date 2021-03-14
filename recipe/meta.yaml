@@ -1,25 +1,25 @@
 {% set name = "attmap" %}
-{% set version = "0.12.11" %}
+{% set version = "0.13.0" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 95b1f7dbcdad7278a3702fa921be6271046c96e1c9ed9feb10e0d4c13092b0a0
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: df267f43cbd711706be7b9d5784a33e79917626f4d185bea199d84eb21f2bc0a
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python
+    - python >=3.6
   run:
-    - python
+    - python >=3.6
     - ubiquerg >=0.2.1
 
 test:
@@ -27,12 +27,12 @@ test:
     - attmap
 
 about:
-  home: "https://github.com/pepkit/attmap"
-  license: "BSD-2-Clause"
-  license_family: "BSD"
-  license_file: "LICENSE.txt"
-  summary: "Multiple access patterns for key-value reference"
+  home: https://github.com/pepkit/attmap
+  license: BSD-2-Clause
+  license_family: BSD
+  license_file: LICENSE.txt
+  summary: Multiple access patterns for key-value reference
 
 extra:
   recipe-maintainers:
-    - michalstolarczyk
+    - stolarczyk
