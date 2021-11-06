@@ -1,5 +1,5 @@
 {% set name = "attmap" %}
-{% set version = "0.13.0" %}
+{% set version = "0.13.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: df267f43cbd711706be7b9d5784a33e79917626f4d185bea199d84eb21f2bc0a
+  sha256: fdffa45f8671c13428eb8c3a1702bfdd1123badb99f7af14d72ad53cc7e770de
 
 build:
   number: 0
