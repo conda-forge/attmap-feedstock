@@ -1,13 +1,13 @@
 {% set name = "attmap" %}
-{% set version = "0.13.2" %}
+{% set version = "0.14.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: fdffa45f8671c13428eb8c3a1702bfdd1123badb99f7af14d72ad53cc7e770de
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: ea9538fadc0d4c17f467f3a6ec508eb18460a16fb2a641c855ad5fdc2ae2b3be
 
 build:
   number: 0
